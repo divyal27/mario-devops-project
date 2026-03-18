@@ -1,0 +1,19 @@
+name: Deploy Mario Game
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Build Docker image
+      run: docker build -t mario-game .
+
+    - name: Run container
+      run: docker run -d -p 8080:80 mario-game
