@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.game {
+    width: 600px;
+    height: 200px;
+    border: 1px solid black;
+    margin: auto;
+    overflow: hidden;
+}
+
+#mario {
+    width: 50px;
+    height: 50px;
+    background: red;
+    position: relative;
+    top: 150px;
+}
+
+.jump {
+    animation: jump 0.5s linear;
+}
+
+@keyframes jump {
+    0% { top: 150px; }
+    50% { top: 100px; }
+    100% { top: 150px; }
+}
+
+#block {
+    width: 20px;
+    height: 20px;
+    background: black;
+    position: relative;
+    top: 130px;
+    left: 580px;
+    animation: block 1s infinite linear;
+}
+
+@keyframes block {
+    0% { left: 580px; }
+    100% { left: -20px; }
+}
